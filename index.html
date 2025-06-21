@@ -12,6 +12,13 @@
     <p>Real-time user feedback analysis using AWS services</p>
   </header>
 
+  <!-- 🌙 Dark Mode Toggle Button -->
+  <div style="text-align: right; margin: 20px 0;">
+    <button id="theme-toggle" style="padding: 8px 16px; border-radius: 5px; border: none; background-color: #004080; color: white; cursor: pointer;">
+      Toggle Dark Mode
+    </button>
+  </div>
+
   <main>
     <section>
       <h2>📌 Project Overview</h2>
@@ -61,5 +68,13 @@
   <footer>
     <p>© 2025 Aryan Giri | Built with ❤️ on AWS</p>
   </footer>
+
+  <!-- 🔘 Dark Mode Script -->
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
