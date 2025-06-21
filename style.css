@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+/* === RESET & BASE STYLES === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,9 +11,10 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header */
+/* === HEADER === */
 header {
   background-color: #004080;
   color: #fff;
@@ -21,6 +22,7 @@ header {
   text-align: center;
   border-radius: 8px;
   margin-bottom: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header h1 {
@@ -32,7 +34,22 @@ header p {
   font-size: 1.1rem;
 }
 
-/* Main Content */
+/* === DARK MODE TOGGLE BUTTON === */
+#theme-toggle {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #004080;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #003366;
+}
+
+/* === MAIN CONTENT === */
 main {
   max-width: 900px;
   margin: auto;
@@ -46,6 +63,7 @@ h2 {
   color: #004080;
   font-size: 1.6rem;
   margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 ul {
@@ -56,27 +74,62 @@ ul li {
   margin-bottom: 8px;
 }
 
-/* Image */
+/* === IMAGE STYLING === */
 img {
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Links */
+/* === LINKS === */
 a {
   color: #0066cc;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
+/* === FOOTER === */
 footer {
   text-align: center;
   margin-top: 60px;
   font-size: 0.9rem;
   color: #777;
+  transition: color 0.3s ease;
+}
+
+/* === DARK MODE STYLES === */
+body.dark {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark h2 {
+  color: #61dafb;
+}
+
+body.dark a {
+  color: #66c2ff;
+}
+
+body.dark footer {
+  color: #999;
+}
+
+body.dark #theme-toggle {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+body.dark #theme-toggle:hover {
+  background-color: #dddddd;
 }
