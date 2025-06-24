@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sentiment Analyzer Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentiment Analyzer | Aryan Giri Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #f9f9f9;
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
 
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
     h2 {
       font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      color: #222;
-    }
-
-    h3 {
       margin-top: 2rem;
-      font-size: 1.5rem;
-      color: #444;
+      color: #1e293b;
     }
 
     p {
@@ -44,64 +52,94 @@
       padding: 0;
       font-size: 1.1rem;
       line-height: 1.8;
+      text-align: left;
+      display: inline-block;
     }
 
     ul li::before {
       content: "• ";
-      color: #007acc;
+      color: #2563eb;
     }
 
     a {
-      color: #0066cc;
+      color: #2563eb;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    .links a {
+      display: block;
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #e2e8f0;
+      font-size: 0.95rem;
+      color: #555;
+    }
   </style>
 </head>
 <body>
 
-  <section class="container">
-    <h2>Sentiment Analyzer – Real-Time Customer Feedback Intelligence</h2>
-    
+  <header>
+    <h1>Sentiment Analyzer</h1>
+    <p>Real-Time Customer Feedback Intelligence</p>
+  </header>
+
+  <div class="container">
+    <h2>Project Overview</h2>
     <p>
-      This project is a fully deployed, production-ready application that allows organizations to collect, analyze, and visualize customer feedback in real time. Built on a serverless AWS architecture, it uses Amazon Comprehend to extract sentiment from user input and presents the results on an interactive React dashboard. It is designed for high scalability, ease of use, and actionable insights, helping businesses improve customer experience through real-time feedback monitoring.
+      Sentiment Analyzer is a production-ready application designed to help organizations understand and act on customer feedback in real time.
+      Using a fully serverless architecture built on AWS, the platform analyzes sentiment using natural language processing and provides
+      live visual feedback through a React-based dashboard. The solution is scalable, cost-effective, and highly actionable—designed for businesses that value customer experience.
     </p>
 
-    <h3>Technologies & Services</h3>
+    <h2>Technologies & Services</h2>
     <p>
       React.js (Frontend) · AWS Lambda (Node.js/Python) · Amazon Comprehend (NLP) · Amazon API Gateway · DynamoDB · Amazon SES · AWS S3 + CloudFront
     </p>
 
-    <h3>Architecture Overview</h3>
+    <h2>Architecture Overview</h2>
     <p>
-      Users submit feedback through a form hosted on AWS S3. This data is routed via API Gateway to a Lambda function, which performs sentiment analysis using Amazon Comprehend and stores the results in DynamoDB. If negative sentiment is detected, Amazon SES sends an alert email. A React.js dashboard pulls this data to display live sentiment trends and breakdowns.
+      Feedback is submitted via a web form hosted on AWS S3. The data is processed through Amazon API Gateway and AWS Lambda,
+      where sentiment analysis is performed using Amazon Comprehend. The results are stored in DynamoDB. If a negative sentiment is detected,
+      an alert email is automatically triggered through Amazon SES. An interactive React dashboard fetches and visualizes the data for real-time insights.
     </p>
 
-    <h3>Live Links</h3>
-    <p>
-      <a href="https://your-form-url" target="_blank">Submit Feedback (Live Form)</a><br/>
-      <a href="https://your-dashboard-url" target="_blank">View Sentiment Dashboard</a><br/>
+    <h2>Live Links</h2>
+    <div class="links">
+      <a href="https://your-form-url" target="_blank">Submit Feedback (Live Form)</a>
+      <a href="https://your-dashboard-url" target="_blank">View Sentiment Dashboard</a>
       <a href="https://github.com/aryangirii/feedback-dashboard" target="_blank">View Source Code (GitHub)</a>
-    </p>
+    </div>
 
-    <h3>Key Features</h3>
+    <h2>Key Features</h2>
     <ul>
-      <li>Real-time sentiment analysis using Amazon Comprehend</li>
-      <li>Automated email notifications for negative feedback</li>
-      <li>Serverless architecture with zero infrastructure maintenance</li>
-      <li>Clean, responsive React dashboard with sentiment visualizations</li>
-      <li>Secure, persistent data storage with DynamoDB</li>
-      <li>Dark mode support for user accessibility</li>
+      <li>Real-time sentiment classification using Amazon Comprehend</li>
+      <li>Automated email alerts for negative feedback using Amazon SES</li>
+      <li>Serverless architecture for scalability and low maintenance</li>
+      <li>Interactive React dashboard with sentiment charts and summaries</li>
+      <li>Secure, persistent storage in DynamoDB</li>
+      <li>Modern UI with light/dark mode support</li>
     </ul>
 
-    <h3>Impact</h3>
+    <h2>Impact</h2>
     <p>
-      This project was built to solve a real-world problem: making customer feedback immediately actionable. It empowers support and product teams to detect issues, monitor sentiment over time, and make informed decisions using live data.
+      This solution addresses a real-world business need: transforming raw customer feedback into meaningful insights.
+      With real-time alerting and sentiment trends, it enables product and support teams to proactively address concerns
+      and improve user satisfaction.
     </p>
-  </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Aryan Giri | Built with AWS & React
+  </footer>
 
 </body>
 </html>
