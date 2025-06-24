@@ -1,81 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sentiment Analyzer | Aryan Giri Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sentiment Analyzer Project</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    h3 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #444;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #007acc;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Sentiment Analyzer on AWS</h1>
-    <p>Real-time user feedback analysis using AWS services</p>
-  </header>
 
-  <!-- 🌙 Dark Mode Toggle Button -->
-  <div style="text-align: right; margin: 20px 0;">
-    <button id="theme-toggle" style="padding: 8px 16px; border-radius: 5px; border: none; background-color: #004080; color: white; cursor: pointer;">
-      Toggle Dark Mode
-    </button>
-  </div>
+  <section class="container">
+    <h2>Sentiment Analyzer – Real-Time Customer Feedback Intelligence</h2>
+    
+    <p>
+      This project is a fully deployed, production-ready application that allows organizations to collect, analyze, and visualize customer feedback in real time. Built on a serverless AWS architecture, it uses Amazon Comprehend to extract sentiment from user input and presents the results on an interactive React dashboard. It is designed for high scalability, ease of use, and actionable insights, helping businesses improve customer experience through real-time feedback monitoring.
+    </p>
 
-  <main>
-    <section>
-      <h2>📌 Project Overview</h2>
-      <p>
-        This project analyzes customer feedback in real-time using AWS Lambda, Amazon Comprehend, and stores results in DynamoDB. A custom React frontend displays feedback with sentiment visualizations and supports dark mode, email alerts, and data insights.
-      </p>
-    </section>
+    <h3>Technologies & Services</h3>
+    <p>
+      React.js (Frontend) · AWS Lambda (Node.js/Python) · Amazon Comprehend (NLP) · Amazon API Gateway · DynamoDB · Amazon SES · AWS S3 + CloudFront
+    </p>
 
-    <section>
-      <h2>🛠 Technologies Used</h2>
-      <ul>
-        <li>React.js (Frontend)</li>
-        <li>API Gateway</li>
-        <li>AWS Lambda (Node.js/Python)</li>
-        <li>Amazon Comprehend (NLP)</li>
-        <li>DynamoDB (Storage)</li>
-        <li>Amazon SES (Email Alerts)</li>
-      </ul>
-    </section>
+    <h3>Architecture Overview</h3>
+    <p>
+      Users submit feedback through a form hosted on AWS S3. This data is routed via API Gateway to a Lambda function, which performs sentiment analysis using Amazon Comprehend and stores the results in DynamoDB. If negative sentiment is detected, Amazon SES sends an alert email. A React.js dashboard pulls this data to display live sentiment trends and breakdowns.
+    </p>
 
-    <section>
-      <h2>📐 Architecture Diagram</h2>
-      <img src="images/architecture-diagram.png" alt="AWS Architecture for Sentiment Analyzer" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
-    </section>
+    <h3>Live Links</h3>
+    <p>
+      <a href="https://your-form-url" target="_blank">Submit Feedback (Live Form)</a><br/>
+      <a href="https://your-dashboard-url" target="_blank">View Sentiment Dashboard</a><br/>
+      <a href="https://github.com/aryangirii/feedback-dashboard" target="_blank">View Source Code (GitHub)</a>
+    </p>
 
-    <section>
-      <h2>🚀 Live Demo & Code</h2>
-      <ul>
-        <li>🔗 <strong>Submit Feedback:</strong> <a href="http://aryan-sentiment-app.s3-website-us-east-1.amazonaws.com" target="_blank">Live Form (AWS S3)</a></li>
-        <li>📊 <strong>View Dashboard:</strong> <a href="https://feedback-dashboard-fx8nibw9a-aryans-projects-97cb8b93.vercel.app" target="_blank">React Dashboard (Vercel)</a></li>
-        <li>💻 <strong>Source Code:</strong> <a href="https://github.com/aryangirii/sentiment-analyzer-portfolio" target="_blank">GitHub Repository</a></li>
-      </ul>
-    </section>
+    <h3>Key Features</h3>
+    <ul>
+      <li>Real-time sentiment analysis using Amazon Comprehend</li>
+      <li>Automated email notifications for negative feedback</li>
+      <li>Serverless architecture with zero infrastructure maintenance</li>
+      <li>Clean, responsive React dashboard with sentiment visualizations</li>
+      <li>Secure, persistent data storage with DynamoDB</li>
+      <li>Dark mode support for user accessibility</li>
+    </ul>
 
-    <section>
-      <h2>📊 Features</h2>
-      <ul>
-        <li>Live sentiment scoring using AWS NLP</li>
-        <li>Stores user feedback and metadata</li>
-        <li>Interactive React-based dashboard</li>
-        <li>Bar charts and sentiment summaries</li>
-        <li>Email alerts for negative sentiment</li>
-        <li>Dark mode UI</li>
-      </ul>
-    </section>
-  </main>
+    <h3>Impact</h3>
+    <p>
+      This project was built to solve a real-world problem: making customer feedback immediately actionable. It empowers support and product teams to detect issues, monitor sentiment over time, and make informed decisions using live data.
+    </p>
+  </section>
 
-  <footer>
-    <p>© 2025 Aryan Giri | Built with ❤️ on AWS</p>
-  </footer>
-
-  <!-- 🔘 Dark Mode Script -->
-  <script>
-    const toggleButton = document.getElementById('theme-toggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
 </body>
 </html>
